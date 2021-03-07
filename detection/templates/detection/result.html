@@ -1,0 +1,11 @@
+{% extends "index/index.html" %}
+
+{% block main %}
+    {% if status == "failure" %}
+    <h2 class="cover-heading">Upload failure. Please check file format.</h2>
+    {% else %}
+    <h2 class="cover-heading">{{result}}</h2>
+    <img src="/media/{{image.image.name}}">
+    {% endif %}
+    <a style="margin-top: 1rem" class="btn btn-lg btn-primary" href="/detection/">Try again.</a>
+{% endblock %}
