@@ -19,6 +19,8 @@ def upload_image_and_detection(request):
     unicode = str(uuid4())
     image = DetectionImage(unicode=unicode)
     image.image.save(unicode+'.'+request.FILES['image'].name.split('.')[-1], content)
-    result = 'result'
+    ###############################    # call your model here with image, process the output as string and store in value 'result'
+    result = 'empty for now'
+    ###############################
     return render(request, 'detection/result.html', {'status': 'success', 'image': image, 'result': result})
 

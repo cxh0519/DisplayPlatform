@@ -4,8 +4,8 @@
     {% if status == "failure" %}
     <h2 class="cover-heading">Upload failure. Please check file format.</h2>
     {% else %}
-    <h2 class="cover-heading">{{result}}</h2>
-    <img src="/media/{{image.image.name}}">
+    <img src="/media/{{image.image.name}}" width="600" height="400">
+    <p style="margin-top: 1rem" class="lead">The prediction result is: {{result}}</p>
     {% endif %}
-    <a style="margin-top: 1rem" class="btn btn-lg btn-primary" href="/reid/">Try again.</a>
+    <a class="btn btn-lg btn-primary" href="/reid/">Try again.</a>
 {% endblock %}
